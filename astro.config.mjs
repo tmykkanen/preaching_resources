@@ -1,23 +1,11 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import starlightObsidian, { obsidianSidebarGroup } from "starlight-obsidian";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     starlight({
-      plugins: [
-        starlightObsidian({
-          vault: "../../Preaching Resources",
-          // Disable generation when deploying
-          skipGeneration: !!process.env["NETLIFY"],
-          output: "preaching",
-          sidebar: {
-            label: "Preaching",
-          },
-        }),
-      ],
       title: "Preaching Resources",
       social: [
         {
@@ -27,19 +15,21 @@ export default defineConfig({
         },
       ],
       sidebar: [
+        // {
+        //   label: "Guides",
+        //   items: [
+        //     // Each item here is one entry in the navigation menu.
+        //     { label: "Example Guide", slug: "guides/example" },
+        //   ],
+        // },
         {
-          label: "Guides",
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: "Example Guide", slug: "guides/example" },
-            { label: "Sermon Timing", slug: "guides/sermon-timing" },
-          ],
+          label: "On Arrangement",
+          autogenerate: { directory: "arrangement" },
         },
         {
-          label: "Reference",
-          autogenerate: { directory: "reference" },
+          label: "Exercises",
+          autogenerate: { directory: "exercises" },
         },
-        obsidianSidebarGroup,
       ],
     }),
   ],
