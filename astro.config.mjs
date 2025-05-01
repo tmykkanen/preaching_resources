@@ -23,9 +23,18 @@ export default defineConfig({
         //   ],
         // },
         {
+          label: "General Tips",
+          autogenerate: { directory: "general" },
+        },
+        {
+          label: "Exegesis",
+          autogenerate: { directory: "exegesis" },
+        },
+        {
           label: "On Arrangement",
           autogenerate: { directory: "arrangement" },
         },
+
         {
           label: "Exercises",
           autogenerate: { directory: "exercises" },
