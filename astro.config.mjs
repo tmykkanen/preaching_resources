@@ -12,6 +12,10 @@ export default defineConfig({
           vault: "../../Preaching Resources",
           // Disable generation when deploying
           skipGeneration: !!process.env["NETLIFY"],
+          output: "preaching",
+          sidebar: {
+            label: "Preaching",
+          },
         }),
       ],
       title: "Preaching Resources",
@@ -28,6 +32,7 @@ export default defineConfig({
           items: [
             // Each item here is one entry in the navigation menu.
             { label: "Example Guide", slug: "guides/example" },
+            { label: "Sermon Timing", slug: "guides/sermon-timing" },
           ],
         },
         {
