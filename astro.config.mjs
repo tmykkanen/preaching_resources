@@ -10,6 +10,8 @@ export default defineConfig({
       plugins: [
         starlightObsidian({
           vault: "../../Preaching Resources",
+          // Disable generation when deploying
+          skipGeneration: !!process.env["NETLIFY"],
         }),
       ],
       title: "Preaching Resources",
