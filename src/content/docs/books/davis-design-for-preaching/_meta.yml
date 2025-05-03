@@ -1,0 +1,8 @@
+# Set the directory sidebar label to `API Reference`.
+label: Davis, Design For Preaching
+
+# Add a badge to the directory sidebar label matching the default accent color.
+# badge: New
+
+# Collapse the directory in the sidebar.
+collapsed: true
